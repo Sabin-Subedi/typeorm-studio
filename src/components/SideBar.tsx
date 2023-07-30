@@ -1,11 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-
 import { ScrollArea } from "@radix-ui/react-scroll-area";
-
+import { TbTable } from "react-icons/tb";
 import { Button } from "./ui/button";
-
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const tables = [
@@ -30,6 +28,7 @@ export function Sidebar({ className }: SidebarProps) {
                   variant="ghost"
                   className="w-full justify-start font-normal"
                 >
+                  <TbTable className="mr-2" />
                   {table.name}
                 </Button>
               ))}
